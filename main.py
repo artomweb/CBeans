@@ -28,14 +28,11 @@ def getDifferentSums(beanCs):
         beanCombosCopy.remove(i)
         for j in beanCombosCopy:
             newBeancombos = beanCombosCopy.copy()
-
-            # print(newBeancombos, i, j)
-
             newBeancombos.remove(j)
 
+            # newBeancombos is now an array of all the beans except from the two being summed
             newBeancombos.insert(0, i + j)
 
-            # print(newBeancombos)
             if newBeancombos not in differentSums:
                 newBeancombos.sort(reverse=True)
                 differentSums.append(newBeancombos)
@@ -43,124 +40,47 @@ def getDifferentSums(beanCs):
     return differentSums
 
 
-toMake = 0
+toMake = 5
 
-beanCombos = [[0.5] * int(toMake / 0.5)]
-
-# beanCombos = [[1, 0.5, 0.5]]
-
-print("og beanCombos", beanCombos)
+halfBeans = [0.5] * int(toMake / 0.5)
 
 
-# def processChildren(thisBean, allBeanCombos):
-#     if all([int(x) == toMake for x in beanCombos]):
-#         return
-
-
-# processChildren(beanCombos[0])
-
-
-def expoloreChild(thisSum, allSums):
-    if thisSum not in allSums:
-        allSums.append(thisSum)
+def findBeans(thisSol, allSols):
+    # If the solution has already been found, don't add it and don't check it's children
+    if thisSol in allSols:
+        return allSols
     else:
-        return allSums
-    if len(thisSum) == 1:
-        return allSums
+        allSols.append(thisSol)
+        
+    # If the solution just added was at the bottom of the tree, it has no children
+    if len(thisSol) == 1:
+        return allSols
 
-    # print("this sum", thisSum, "allSums", allSums)
-    # print("allSums", allSums)
+    # Get all the child nodes of current solution and explore them recursively
+    theseSols = getDifferentSums(thisSol)
+    for i in theseSols:
+        findBeans(i, allSols)
 
-    theseSums = getDifferentSums(thisSum)
-    for i in theseSums:
-        expoloreChild(i, allSums)
+    return allSols
 
-
-allSums = []
-for i in beanCombos:
-    print("first beans", i)
-    expoloreChild(i, allSums)
+solutions = findBeans(halfBeans, [])
 
 
-# for i in beanCombos:
-#     sums = getDifferentSums(i)
-#     # print(sums)
-#     allSums += sums
-#     for j in sums:
-#         sums2 = getDifferentSums(j)
-#         # print(sums2)
-#         allSums += sums2
-#         for k in sums2:
-#             sums3 = getDifferentSums(k)
-#             # print(sums3)
-#             allSums += sums3
+print("\nNumber to count to:")
+print(toMake)
 
+solutions.sort(key=len, reverse=True)
 
-print()
-print(allSums)
-# beanCombos = [1, 0.5, 0.5]
-
-print()
-print()
-
-allSums.sort(key=len, reverse=True)
-
+print("\nSolutions in numbers:")
 allTexts = []
-for i in allSums:
+for i in solutions:
     print(i)
     allTexts.append(formatText(i))
 
-print()
+print("\nSolutions in words:")
 allTexts.sort(key=len, reverse=True)
 for i in allTexts:
-    # print(i)
     print(i)
-print(len(allSums))
 
-exit()
-
-itt = 10
-
-endState = False
-
-allBeanCombos = []
-
-while not endState:
-    for i in beanCombos:
-        beanCombos = getAllDifferentSums(beanCombos)
-
-    for i in beanCombos:
-        if i not in allBeanCombos:
-            allBeanCombos.append(i)
-
-    if all([int(x) == toMake for x in beanCombos]) or itt > 10:
-        endState = True
-    else:
-        itt += 1
-
-print(allBeanCombos)
-# for i in beanCombos:
-#     print(i)
-#     print(formatText(i))
-# if len(different) == 1:
-#     newCombos = beanCombos.copy()
-#     newCombos.insert(0, different[0] * 2)
-# else:
-#     for i in different:
-#         newDifferent = different.copy()
-#         newDifferent.remove(i)
-#         for j in newDifferent:
-#             print(i, j)
-#             newCombos = beanCombos.copy()
-#             newCombos.remove(i)
-#             newCombos.remove(j)
-
-#             newCombos.insert(0, i + j)
-#             print(newCombos)
-
-
-def getDifferentValues(arr):
-    return list(set(arr))
-
-
-# print(formatText(beanCombos))
+print("\nTotal number of solutions:")
+print(len(solutions))
