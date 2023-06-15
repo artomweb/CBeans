@@ -1,7 +1,7 @@
 import pygraphviz as pgv
 import time
-
-
+import matplotlib.pyplot as plt
+import numpy as np
 
 def formatText(beanCs):
     outputArr = []
@@ -46,23 +46,13 @@ def getDifferentSums(beanCs):
     return differentSums
 
 
-toMake = 10
-
-halfBeans = [0.5] * int(toMake / 0.5)
 
 
-def findBeans(thisSol, allSols, graph, parent):
+def findBeans(thisSol, allSols):
     # If the solution has already been found, don't add it and don't check its children
     if thisSol in allSols:
         return allSols
         
-    colour = "red" if thisSol in allSols else "green"
-
-    node_id = str(len(allSols) + 1)
-
-    graph.add_node(node_id, label=", ".join(map(str, thisSol)), fillcolor=colour, style="filled")
-    if parent:
-        graph.add_edge(parent, node_id)
     allSols.append(thisSol)
         
     # If the solution just added was at the bottom of the tree, it has no children
@@ -72,57 +62,33 @@ def findBeans(thisSol, allSols, graph, parent):
     # Get all the child nodes of the current solution and explore them recursively
     theseSols = getDifferentSums(thisSol)
     for i in theseSols:
-        findBeans(i, allSols, graph, parent=node_id)
+        findBeans(i, allSols)
 
     return allSols
 
-# Create a new graph
-graph = pgv.AGraph()
+# timings = []
+# for i in range(0, 20):
+#     halfBeans = [0.5] * int(i / 0.5)
+#     t0 = time.time()
+#     solutions = findBeans(halfBeans, [])
+#     t1 = time.time()
+#     timings.append([i, t1-t0])
+#     print([i, t1-t0])
 
-# Create the root node
-root_id = "0"
-graph.add_node(root_id, label="Making " + str(toMake))
 
-# Find and add beans recursively
+# print(timings)
+
+# dfTImings = np.array(timings)
+
+# plt.plot(dfTImings[:, 0], dfTImings[:, 1])
+
+
+# plt.show()
+
+halfBeans = [0.5] * int(15 / 0.5)
 t0 = time.time()
-solutions = findBeans(halfBeans, [], graph, parent=root_id)
+solutions = findBeans(halfBeans, [])
 t1 = time.time()
 
-graph.layout(prog="dot")
-
-# Save the graph to a file
-graph.draw("graph.png")
-
-
-# print(getDifferentSums([1.5, 0.5, 0.5, 0.5]))
-
-# exit()
-
-
-# graph.render(filename='graph.dot')
-
-
-print("\nNumber to count to:")
-print(toMake)
-
-
-solutions.sort(key=len, reverse=True)
-# print(solutions)
-
-print("\nSolutions in numbers:")
-allTexts = []
-for i in solutions:
-    print(i)
-    allTexts.append(formatText(i))
-
-print("\nSolutions in words:")
-allTexts.sort(key=len, reverse=True)
-for i in allTexts:
-    print(i)
-
-print("\nTotal number of solutions:")
-print(len(solutions))
-
-
-print("\nTime:")
-print(t1-t0, "seconds")
+print(solutions)
+print(t1-t0)
