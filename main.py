@@ -1,3 +1,8 @@
+from treelib import Node, Tree
+
+
+
+
 def formatText(beanCs):
     outputArr = []
     for bean in beanCs:
@@ -40,16 +45,18 @@ def getDifferentSums(beanCs):
     return differentSums
 
 
-toMake = 5
+toMake = 10
 
 halfBeans = [0.5] * int(toMake / 0.5)
 
 
-def findBeans(thisSol, allSols):
+def findBeans(thisSol, allSols, tree, parent):
     # If the solution has already been found, don't add it and don't check it's children
     if thisSol in allSols:
         return allSols
     else:
+        node_id = str(len(allSols) + 1)
+        tree.create_node(", ".join(map(str, thisSol)), node_id, parent=parent)
         allSols.append(thisSol)
         
     # If the solution just added was at the bottom of the tree, it has no children
@@ -59,28 +66,37 @@ def findBeans(thisSol, allSols):
     # Get all the child nodes of current solution and explore them recursively
     theseSols = getDifferentSums(thisSol)
     for i in theseSols:
-        findBeans(i, allSols)
+        findBeans(i, allSols, tree, parent=node_id)
 
     return allSols
 
-solutions = findBeans(halfBeans, [])
+# tree.create_node(", ".join(map(str, halfBeans)), "0"
+# )
+tree = Tree()
+root_id = "0"
+tree.create_node("Making " + str(toMake), root_id)
+solutions = findBeans(halfBeans, [], tree, parent=root_id)
+
+tree.show()
+tree.to_graphviz(filename="graph")
 
 
-print("\nNumber to count to:")
-print(toMake)
+# print("\nNumber to count to:")
+# print(toMake)
 
 solutions.sort(key=len, reverse=True)
 
-print("\nSolutions in numbers:")
-allTexts = []
+# print("\nSolutions in numbers:")
+# allTexts = []
 for i in solutions:
-    print(i)
-    allTexts.append(formatText(i))
+    # print(i)
+    # allTexts.append(formatText(i))
+    print(formatText(i))
 
-print("\nSolutions in words:")
-allTexts.sort(key=len, reverse=True)
-for i in allTexts:
-    print(i)
+# print("\nSolutions in words:")
+# allTexts.sort(key=len, reverse=True)
+# for i in allTexts:
+#     print(i)
 
-print("\nTotal number of solutions:")
-print(len(solutions))
+# print("\nTotal number of solutions:")
+# print(len(solutions))
