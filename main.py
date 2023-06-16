@@ -2,7 +2,6 @@ import pygraphviz as pgv
 import time
 
 
-
 def formatText(beanCs):
     outputArr = []
     for bean in beanCs:
@@ -26,45 +25,41 @@ def formatText(beanCs):
 
 
 def getDifferentSums(beanCs):
-    differentSums = []
+    differentSums = set()
 
-    for i in beanCs:
-        beanCombosCopy = beanCs.copy()
-        beanCombosCopy.remove(i)
-        for j in beanCombosCopy:
-            newBeancombos = beanCombosCopy.copy()
-            newBeancombos.remove(j)
+    for i in range(len(beanCs)):
+        for j in range(i + 1, len(beanCs)):
+            newSum = beanCs[i] + beanCs[j]
 
-            # newBeancombos is now an array of all the beans except from the two being summed
-            newBeancombos.insert(0, i + j)
+            if newSum in differentSums:
+                continue
 
+            newBeancombos = beanCs[:i] + beanCs[i + 1 : j] + beanCs[j + 1 :]
+            newBeancombos.insert(0, newSum)
             newBeancombos.sort(reverse=True)
+            differentSums.add(tuple(newBeancombos))
 
-            if newBeancombos not in differentSums:
-                differentSums.append(newBeancombos)
-
-    return differentSums
+    return [list(combo) for combo in differentSums]
 
 
-toMake = 10
-
-halfBeans = [0.5] * int(toMake / 0.5)
-
-
-def findBeans(thisSol, allSols, graph, parent):
+def findBeans(thisSol, allSols, graph, parent, memo):
     # If the solution has already been found, don't add it and don't check its children
-    if thisSol in allSols:
+    if tuple(thisSol) in memo:
         return allSols
-        
+
     colour = "red" if thisSol in allSols else "green"
 
     node_id = str(len(allSols) + 1)
 
-    graph.add_node(node_id, label=", ".join(map(str, thisSol)), fillcolor=colour, style="filled")
+    graph.add_node(
+        node_id, label=", ".join(map(str, thisSol)), fillcolor=colour, style="filled"
+    )
     if parent:
         graph.add_edge(parent, node_id)
+
     allSols.append(thisSol)
-        
+    memo.add(tuple(thisSol))
+
     # If the solution just added was at the bottom of the tree, it has no children
     if len(thisSol) == 1:
         return allSols
@@ -72,9 +67,14 @@ def findBeans(thisSol, allSols, graph, parent):
     # Get all the child nodes of the current solution and explore them recursively
     theseSols = getDifferentSums(thisSol)
     for i in theseSols:
-        findBeans(i, allSols, graph, parent=node_id)
+        findBeans(i, allSols, graph, node_id, memo)
 
     return allSols
+
+
+toMake = 10
+
+halfBeans = [0.5] * int(toMake / 0.5)
 
 # Create a new graph
 graph = pgv.AGraph()
@@ -83,9 +83,11 @@ graph = pgv.AGraph()
 root_id = "0"
 graph.add_node(root_id, label="Making " + str(toMake))
 
+
+memo = set()
 # Find and add beans recursively
 t0 = time.time()
-solutions = findBeans(halfBeans, [], graph, parent=root_id)
+solutions = findBeans(halfBeans, [], graph, root_id, memo)
 t1 = time.time()
 
 graph.layout(prog="dot")
@@ -125,4 +127,4 @@ print(len(solutions))
 
 
 print("\nTime:")
-print(t1-t0, "seconds")
+print(t1 - t0, "seconds")
