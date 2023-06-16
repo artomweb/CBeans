@@ -1,4 +1,6 @@
 import time
+
+
 def partition(number, memo={}):
     if number in memo:
         return memo[number]
@@ -19,15 +21,12 @@ def partition(number, memo={}):
     return answer
 
 
-
-
-
 # Example usage
-n = 25
+n = 15
 print(f"Partitions of {n} with integer and 0.5 sums:")
 t0 = time.time()
 partitions = list(partition(n))
 t1 = time.time()
 # print(partitions)
 print(len(partitions))
-print(t1-t0, "seconds")
+print((t1 - t0) * 1000, "ms")

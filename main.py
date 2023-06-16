@@ -72,7 +72,7 @@ def findBeans(thisSol, allSols, graph, parent, memo):
     return allSols
 
 
-toMake = 10
+toMake = 2
 
 halfBeans = [0.5] * int(toMake / 0.5)
 
