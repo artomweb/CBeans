@@ -7,7 +7,12 @@ def partition(number, memo={}):
     answer.add((number,))
 
     for x in range(1, int(number * 2)):
-        for y in partition(number - x / 2, memo):
+        remaining_number = number - x / 2
+
+        if remaining_number < x / 2:
+            break
+
+        for y in partition(remaining_number, memo):
             answer.add(tuple(sorted((x / 2,) + y)))
 
     memo[number] = answer
@@ -15,8 +20,10 @@ def partition(number, memo={}):
 
 
 
+
+
 # Example usage
-n = 2
+n = 25
 print(f"Partitions of {n} with integer and 0.5 sums:")
 t0 = time.time()
 partitions = list(partition(n))
