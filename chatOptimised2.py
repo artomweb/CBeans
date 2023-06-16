@@ -8,12 +8,13 @@ def partition(number):
     for i in range(1, int(number * 2) + 1):
         for j in range(i, int(number * 2) + 1):
             for partition in partitions[j - i]:
-                partitions[j].append(partition + [i / 2])
+                new_partition = partition + [i / 2]
+                partitions[j].append(new_partition)
 
     return partitions[int(number * 2)]
 
 
-n = 30
+n = 10
 t0 = time.time()
 partitions = partition(n)
 partitions_set = [tuple(sorted(partition)) for partition in partitions]
