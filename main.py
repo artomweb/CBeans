@@ -109,7 +109,7 @@ print(toMake)
 
 
 solutions.sort(key=len, reverse=True)
-# print(solutions)
+print(solutions)
 
 print("\nSolutions in numbers:")
 allTexts = []

@@ -82,7 +82,7 @@ def findBeans(thisSol, allSols, memo):
 
 # plt.show()
 
-toMake = 5
+toMake = 15
 
 halfBeans = [0.5] * int(toMake / 0.5)
 memo = set()
@@ -90,7 +90,8 @@ t0 = time.time()
 solutions = findBeans(halfBeans, [], memo)
 t1 = time.time()
 
-# print(solutions)
+print(solutions)
+print(len(solutions))
 print(t1 - t0)
 
 
