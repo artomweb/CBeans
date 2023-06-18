@@ -22,7 +22,7 @@ def partition(number, memo={}):
 
 
 # Example usage
-n = 25
+n = 20
 print(f"Partitions of {n} with integer and 0.5 sums:")
 t0 = time.time()
 partitions = list(partition(n))
