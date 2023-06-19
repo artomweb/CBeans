@@ -38,7 +38,7 @@ def compute_addition_possibilities(arr):
     return possibilities
 
 
-
+from itertools import permutations
 
 
 def getDifferentSums(beanCs):
@@ -46,16 +46,18 @@ def getDifferentSums(beanCs):
     sumVariations = set()
     
 
-    for i in range(len(beanCs)):
-        for j in range(i + 1, len(beanCs)):
-            newSum = beanCs[i] + beanCs[j]
+    for perm in set(combinations(beanCs, 2)):
+        newSum = sum(perm)
 
-            if newSum in sumVariations:
-                break
+        if newSum in sumVariations:
+            continue
             
-            sumVariations.add(newSum)
-            newBeanCombos = (newSum, ) + beanCs[:i] + beanCs[i + 1:j] + beanCs[j + 1:]
-            differentSums.add(tuple(sorted(newBeanCombos)))
+        sumVariations.add(newSum)
+        
+        remaining = list(beanCs)
+        remaining.remove(perm[0])
+        remaining.remove(perm[1])
+        differentSums.add(tuple(sorted([newSum] + remaining)))
 
 
     return differentSums
@@ -118,27 +120,27 @@ def findBeans(thisSol, allSols):
 
 
 # Example usage
-arr = [0.5, 0.5, 0.5, 1, 1.5]
+arr = [ 1.5, 0.5, 0.5, 1]
 
-# print(getDifferentSums(tuple(arr)))
+print(getDifferentSums(tuple(arr)))
 
 
 
-t0 = time.time()
-pairs = []
-for i in range(len(arr)):
-        for j in range(i + 1, len(arr)):
-            pairs.append([arr[i], arr[j]])
-t1 = time.time()
+# t0 = time.time()
+# pairs = set()
+# for i in range(len(arr)):
+#         for j in range(i + 1, len(arr)):
+#             pairs.add((arr[i], arr[j]))
+# t1 = time.time()
 
-print(pairs)
-print((t1 - t0) * 1000, "ms")
+# print(pairs)
+# print((t1 - t0) * 1000, "ms")
 
-t0 = time.time()
-combs = set(combinations(arr, 2))
-t1 = time.time()
-print(combs)
-print((t1 - t0) * 1000, "ms")
+# t0 = time.time()
+# combs = set(combinations(arr, 2))
+# t1 = time.time()
+# print(combs)
+# print((t1 - t0) * 1000, "ms")
 
 # beanCombos = [1.5, 1, 0.5, 0.5, 0.5]
 
