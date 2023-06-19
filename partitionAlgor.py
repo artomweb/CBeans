@@ -8,7 +8,7 @@ def partitions(n, I=1):
             yield (i,) + p
 
 
-n = 69
+n = 40
 print(f"Partitions of {n} with integer and 0.5 sums:")
 t0 = time.time()
 partitions = list(partitions(n))

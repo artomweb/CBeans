@@ -2,17 +2,14 @@ import time
 
 
 def partitions(n):
-    seen = set()
-    yield (n,)
-    for i in range(1, int(n // 0.5) + 1):
-        for p in partitions(n - (i * 0.5)):
-            partition = tuple(sorted(round(x, 1) for x in (i * 0.5,) + p))
-            if all(element >= 0.5 for element in partition) and partition not in seen:
-                seen.add(partition)
-                yield partition
+    result = {(n,)}
+    for i in range(1, int(n * 2)):
+        for p in partitions(n - i / 2):
+            result.add(tuple(sorted((i / 2,) + p)))
+    return result
 
 
-n = 25
+n = 10
 t0 = time.time()
 results = list(partitions(n))
 t1 = time.time()

@@ -2,6 +2,7 @@ import time
 import matplotlib.pyplot as plt
 import numpy as np
 from itertools import combinations
+import math
 
 
 def formatText(beanCs):
@@ -46,18 +47,17 @@ def getDifferentSums(beanCs):
     sumVariations = set()
     
 
-    for perm in set(combinations(beanCs, 2)):
-        newSum = sum(perm)
+    for i in range(len(beanCs)):
+        for j in range(i + 1, len(beanCs)):
+            newSum = beanCs[i] + beanCs[j]
 
-        if newSum in sumVariations:
-            continue
+            if newSum in sumVariations:
+                break
             
-        sumVariations.add(newSum)
-        
-        remaining = list(beanCs)
-        remaining.remove(perm[0])
-        remaining.remove(perm[1])
-        differentSums.add(tuple(sorted([newSum] + remaining)))
+            sumVariations.add(newSum)
+
+            newBeanCombos = (newSum, ) + beanCs[:i] + beanCs[i + 1:j] + beanCs[j + 1:]
+            differentSums.add(tuple(sorted(newBeanCombos)))
 
 
     return differentSums
@@ -81,38 +81,50 @@ def findBeans(thisSol, allSols):
     for i in theseSols:
         findBeans(i, allSols)
 
+
     return allSols
 
 
 # timings = []
-# for i in range(0, 20):
-#     halfBeans = [0.5] * int(i / 0.5)
+
+# start = 0
+# stop = 25
+
+# for i in range(start, stop + 1):
+#     halfBeans = tuple([0.5] * int(i / 0.5))
 #     t0 = time.time()
-#     solutions = findBeans(halfBeans, [])
+#     solutions = findBeans(halfBeans, set())
 #     t1 = time.time()
-#     timings.append([i, t1-t0])
-#     print([i, t1-t0])
+#     timings.append([i, (t1-t0) * 1000])
+#     print([i, (t1-t0) * 1000])
 
 
 # print(timings)
 
+
 # dfTImings = np.array(timings)
+# np.savetxt("foo.csv", dfTImings, delimiter=",")
+
+# new_list = range(start, stop+1)
+# plt.xticks(new_list)
 
 # plt.plot(dfTImings[:, 0], dfTImings[:, 1])
 
+# plt.xlabel("Count to")
+# plt.ylabel("Execution time (ms)")
 
 # plt.show()
 
-# toMake = 2
+toMake = 10
 
-# halfBeans = tuple([0.5] * int(toMake / 0.5))
-# t0 = time.time()
-# solutions = findBeans(halfBeans, set())
-# t1 = time.time()
+halfBeans = tuple([0.5] * int(toMake / 0.5))
+t0 = time.time()
+solutions = findBeans(halfBeans, set())
+t1 = time.time()
 
 # print(solutions)
-# print(len(solutions))
-# print((t1 - t0) * 1000, "ms")
+print(len(solutions))
+print((t1 - t0) * 1000, "ms")
 
 
 # print(getDifferentSums([1, 0.5, 0.5]))
@@ -120,9 +132,9 @@ def findBeans(thisSol, allSols):
 
 
 # Example usage
-arr = [ 1.5, 0.5, 0.5, 1]
+# arr = [ 1.5, 0.5, 0.5, 1]
 
-print(getDifferentSums(tuple(arr)))
+# print(getDifferentSums(tuple(arr)))
 
 
 
