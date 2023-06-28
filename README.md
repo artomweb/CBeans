@@ -109,6 +109,8 @@ For combinations of 3 there is a lot of duplication. Duplicate solutions are **n
 
 ### Calculating a nodes children
 
+This code is based upon recursively exploring this tree structure.
+
 ```python
 def getDifferentSums(beanCs):
     differentSums = set()
@@ -131,8 +133,6 @@ def getDifferentSums(beanCs):
 
     return differentSums
 ```
-
-This code is based upon recursively exploring this tree structure.
 
 This function is how we find the children of each node in the tree. For example, starting from an array of [1, 0.5, 0.5] it will output the two options as [[1.5, 0.5], [1, 1]]
 
