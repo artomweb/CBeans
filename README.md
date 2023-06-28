@@ -37,7 +37,7 @@ The number that is being “counted to” is not given, “five what?”.
 
    “One and a half beans”
 
-   Another example, these two sentences are **\*\***not**\*\*** the same:
+   Another example, these two sentences are **not** the same:
 
    “Two beans, Two beans”
 
