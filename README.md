@@ -1,3 +1,7 @@
+# How many beans make n?
+
+A write up of code which calculates the number of solutions to the question “How many beans make n?”.
+
 # How many beans?
 
 There are **42** solutions to the question **"How many beans make five?”**
