@@ -107,15 +107,7 @@ For combinations of 3 there is a lot of duplication. Duplicate solutions are **n
 
 ## Code
 
-The code is based upon recursively exploring this tree structure.
-
-This function is how we find the children of each node in the tree. For example, starting from an array of [1, 0.5, 0.5] it will output the two options as [[1.5, 0.5], [1, 1]]
-
-We iterate over every combination of unique pairs in the array and calculate their sum. If we haven’t seen this sum before then we can add the new solution to the array of different sums. The output is given as a set for faster lookups of “if x in sums”.
-
-The nested for loop compares each element with all of the elements after it, this will only find all of the unique combinations if the array is sorted.
-
-The sum variations set helps to efficiently skip through duplicate entries, for example if the input is (0.5, 0.5, 0.5, 1). Only the sums for the first 0.5 are calculated and the rest are skipped because they will be the same.
+### Calculating a nodes children
 
 ```python
 def getDifferentSums(beanCs):
@@ -140,9 +132,17 @@ def getDifferentSums(beanCs):
     return differentSums
 ```
 
-## Recursively navigating the tree structure:
+This code is based upon recursively exploring this tree structure.
 
-This recursive function is used to navigate each node in the tree and returns a list of all of the solutions.
+This function is how we find the children of each node in the tree. For example, starting from an array of [1, 0.5, 0.5] it will output the two options as [[1.5, 0.5], [1, 1]]
+
+We iterate over every combination of unique pairs in the array and calculate their sum. If we haven’t seen this sum before then we can add the new solution to the array of different sums. The output is given as a set for faster lookups of “if x in sums”.
+
+The nested for loop compares each element with all of the elements after it, this will only find all of the unique combinations if the array is sorted.
+
+The sum variations set helps to efficiently skip through duplicate entries, for example if the input is (0.5, 0.5, 0.5, 1). Only the sums for the first 0.5 are calculated and the rest are skipped because they will be the same.
+
+### Recursively navigating the tree structure:
 
 ```python
 def findBeans(thisSol, allSols):
@@ -163,6 +163,10 @@ def findBeans(thisSol, allSols):
 
     return allSols
 ```
+
+This recursive function is used to navigate each node in the tree and returns a list of all of the solutions.
+
+### Calling the recursive function
 
 We start with an array of half beans with the same length as the number of beans that we want to make. This is the first node in the tree.
 
