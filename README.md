@@ -187,100 +187,100 @@ The singular bean solution such as “1 bean” can be omitted.
 
 ### 1 (2 solutions)
 
-half a bean, half a bean
-1 bean
+half a bean, half a bean\
+1 bean\
 
 ### 2 (5 Solutions)
 
-half a bean, half a bean, half a bean, half a bean
-1 bean, half a bean, half a bean
-1 and a half beans, half a bean
-1 bean, 1 bean
-2 beans
+half a bean, half a bean, half a bean, half a bean\
+1 bean, half a bean, half a bean\
+1 and a half beans, half a bean\
+1 bean, 1 bean\
+2 beans\
 
 ### 3 (11 Solutions)
 
-half a bean, half a bean, half a bean, half a bean, half a bean, half a bean
-1 bean, half a bean, half a bean, half a bean, half a bean
-1 and a half beans, half a bean, half a bean, half a bean
-1 bean, 1 bean, half a bean, half a bean
-1 and a half beans, 1 bean, half a bean
-1 and a half beans, 1 and a half beans
-2 beans, half a bean, half a bean
-2 and a half beans, half a bean
-1 bean, 1 bean, 1 bean
-2 beans, 1 bean
-3 beans
+half a bean, half a bean, half a bean, half a bean, half a bean, half a bean\
+1 bean, half a bean, half a bean, half a bean, half a bean\
+1 and a half beans, half a bean, half a bean, half a bean\
+1 bean, 1 bean, half a bean, half a bean\
+1 and a half beans, 1 bean, half a bean\
+1 and a half beans, 1 and a half beans\
+2 beans, half a bean, half a bean\
+2 and a half beans, half a bean\
+1 bean, 1 bean, 1 bean\
+2 beans, 1 bean\
+3 beans\
 
 ### 4 (22 Solutions)
 
-half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean
-1 bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean
-1 and a half beans, half a bean, half a bean, half a bean, half a bean, half a bean
-1 bean, 1 bean, half a bean, half a bean, half a bean, half a bean
-1 and a half beans, 1 bean, half a bean, half a bean, half a bean
-1 and a half beans, 1 and a half beans, half a bean, half a bean
-2 beans, half a bean, half a bean, half a bean, half a bean
-2 and a half beans, half a bean, half a bean, half a bean
-1 bean, 1 bean, 1 bean, half a bean, half a bean
-1 and a half beans, 1 bean, 1 bean, half a bean
-1 and a half beans, 1 and a half beans, 1 bean
-2 beans, 1 bean, half a bean, half a bean
-2 beans, 1 and a half beans, half a bean
-2 and a half beans, 1 bean, half a bean
-2 and a half beans, 1 and a half beans
-3 beans, half a bean, half a bean
-3 and a half beans, half a bean
-1 bean, 1 bean, 1 bean, 1 bean
-2 beans, 1 bean, 1 bean
-2 beans, 2 beans
-3 beans, 1 bean
-4 beans
+half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean\
+1 bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean\
+1 and a half beans, half a bean, half a bean, half a bean, half a bean, half a bean\
+1 bean, 1 bean, half a bean, half a bean, half a bean, half a bean\
+1 and a half beans, 1 bean, half a bean, half a bean, half a bean\
+1 and a half beans, 1 and a half beans, half a bean, half a bean\
+2 beans, half a bean, half a bean, half a bean, half a bean\
+2 and a half beans, half a bean, half a bean, half a bean\
+1 bean, 1 bean, 1 bean, half a bean, half a bean\
+1 and a half beans, 1 bean, 1 bean, half a bean\
+1 and a half beans, 1 and a half beans, 1 bean\
+2 beans, 1 bean, half a bean, half a bean\
+2 beans, 1 and a half beans, half a bean\
+2 and a half beans, 1 bean, half a bean\
+2 and a half beans, 1 and a half beans\
+3 beans, half a bean, half a bean\
+3 and a half beans, half a bean\
+1 bean, 1 bean, 1 bean, 1 bean\
+2 beans, 1 bean, 1 bean\
+2 beans, 2 beans\
+3 beans, 1 bean\
+4 beans\
 
 ### 5 (42 Solutions)
 
-half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean
-1 bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean
-1 and a half beans, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean
-1 bean, 1 bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean
-1 and a half beans, 1 bean, half a bean, half a bean, half a bean, half a bean, half a bean
-1 and a half beans, 1 and a half beans, half a bean, half a bean, half a bean, half a bean
-2 beans, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean
-2 and a half beans, half a bean, half a bean, half a bean, half a bean, half a bean
-1 bean, 1 bean, 1 bean, half a bean, half a bean, half a bean, half a bean
-1 and a half beans, 1 bean, 1 bean, half a bean, half a bean, half a bean
-1 and a half beans, 1 and a half beans, 1 bean, half a bean, half a bean
-1 and a half beans, 1 and a half beans, 1 and a half beans, half a bean
-2 beans, 1 bean, half a bean, half a bean, half a bean, half a bean
-2 beans, 1 and a half beans, half a bean, half a bean, half a bean
-2 and a half beans, 1 bean, half a bean, half a bean, half a bean
-2 and a half beans, 1 and a half beans, half a bean, half a bean
-3 beans, half a bean, half a bean, half a bean, half a bean
-3 and a half beans, half a bean, half a bean, half a bean
-1 bean, 1 bean, 1 bean, 1 bean, half a bean, half a bean
-1 and a half beans, 1 bean, 1 bean, 1 bean, half a bean
-1 and a half beans, 1 and a half beans, 1 bean, 1 bean
-2 beans, 1 bean, 1 bean, half a bean, half a bean
-**2 beans, 1 and a half beans, 1 bean, half a bean ← Original Answer**
-2 and a half beans, 1 bean, 1 bean, half a bean
-2 beans, 1 and a half beans, 1 and a half beans
-2 and a half beans, 1 and a half beans, 1 bean
-2 beans, 2 beans, half a bean, half a bean
-3 beans, 1 bean, half a bean, half a bean
-3 beans, 1 and a half beans, half a bean
-2 and a half beans, 2 beans, half a bean
-3 and a half beans, 1 bean, half a bean
-1 bean, 1 bean, 1 bean, 1 bean, 1 bean
-3 and a half beans, 1 and a half beans
-2 and a half beans, 2 and a half beans
-4 beans, half a bean, half a bean
-2 beans, 1 bean, 1 bean, 1 bean
-4 and a half beans, half a bean
-2 beans, 2 beans, 1 bean
-3 beans, 1 bean, 1 bean
-3 beans, 2 beans
-4 beans, 1 bean
-5 beans
+half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean\
+1 bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean\
+1 and a half beans, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean\
+1 bean, 1 bean, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean\
+1 and a half beans, 1 bean, half a bean, half a bean, half a bean, half a bean, half a bean\
+1 and a half beans, 1 and a half beans, half a bean, half a bean, half a bean, half a bean\
+2 beans, half a bean, half a bean, half a bean, half a bean, half a bean, half a bean\
+2 and a half beans, half a bean, half a bean, half a bean, half a bean, half a bean\
+1 bean, 1 bean, 1 bean, half a bean, half a bean, half a bean, half a bean\
+1 and a half beans, 1 bean, 1 bean, half a bean, half a bean, half a bean\
+1 and a half beans, 1 and a half beans, 1 bean, half a bean, half a bean\
+1 and a half beans, 1 and a half beans, 1 and a half beans, half a bean\
+2 beans, 1 bean, half a bean, half a bean, half a bean, half a bean\
+2 beans, 1 and a half beans, half a bean, half a bean, half a bean\
+2 and a half beans, 1 bean, half a bean, half a bean, half a bean\
+2 and a half beans, 1 and a half beans, half a bean, half a bean\
+3 beans, half a bean, half a bean, half a bean, half a bean\
+3 and a half beans, half a bean, half a bean, half a bean\
+1 bean, 1 bean, 1 bean, 1 bean, half a bean, half a bean\
+1 and a half beans, 1 bean, 1 bean, 1 bean, half a bean\
+1 and a half beans, 1 and a half beans, 1 bean, 1 bean\
+2 beans, 1 bean, 1 bean, half a bean, half a bean\
+**2 beans, 1 and a half beans, 1 bean, half a bean ← Original Answer**\
+2 and a half beans, 1 bean, 1 bean, half a bean\
+2 beans, 1 and a half beans, 1 and a half beans\
+2 and a half beans, 1 and a half beans, 1 bean\
+2 beans, 2 beans, half a bean, half a bean\
+3 beans, 1 bean, half a bean, half a bean\
+3 beans, 1 and a half beans, half a bean\
+2 and a half beans, 2 beans, half a bean\
+3 and a half beans, 1 bean, half a bean\
+1 bean, 1 bean, 1 bean, 1 bean, 1 bean\
+3 and a half beans, 1 and a half beans\
+2 and a half beans, 2 and a half beans\
+4 beans, half a bean, half a bean\
+2 beans, 1 bean, 1 bean, 1 bean\
+4 and a half beans, half a bean\
+2 beans, 2 beans, 1 bean\
+3 beans, 1 bean, 1 bean\
+3 beans, 2 beans\
+4 beans, 1 bean\
+5 beans\
 
 The sequence of solution counts follows, 1, 2, 5, 11, 22, 42, 77, 135, 231, 385, 627, 1002, 1575, 2436, 3718.
 

@@ -1,30 +1,6 @@
 import time
 import matplotlib.pyplot as plt
 import numpy as np
-from itertools import combinations
-import math
-
-
-def formatText(beanCs):
-    outputArr = []
-    for bean in beanCs:
-        thisOut = ""
-        if bean == 0.5:
-            thisOut += "half a bean"
-        else:
-            if (bean % 1) == 0.5:
-                thisOut += str(int(bean)) + " and a half"
-            else:
-                thisOut += str(int(bean))
-
-            if bean > 1:
-                thisOut += " beans"
-            else:
-                thisOut += " bean"
-
-        outputArr.append(thisOut)
-
-    return ", ".join(outputArr)
 
 def compute_addition_possibilities(arr):
     n = len(arr)
@@ -37,9 +13,6 @@ def compute_addition_possibilities(arr):
             possibilities.add(tuple(sum2))
 
     return possibilities
-
-
-from itertools import permutations
 
 
 def getDifferentSums(beanCs):

@@ -121,6 +121,7 @@ print("\nSolutions in words:")
 allTexts.sort(key=len, reverse=True)
 for i in allTexts:
     print(i)
+# print(allTexts)
 
 print("\nTotal number of solutions:")
 print(len(solutions))
