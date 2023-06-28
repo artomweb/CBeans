@@ -115,16 +115,18 @@ def findBeans(thisSol, allSols):
 
 # plt.show()
 
-toMake = 10
+toMake = 20
 
 halfBeans = tuple([0.5] * int(toMake / 0.5))
 t0 = time.time()
 solutions = findBeans(halfBeans, set())
 t1 = time.time()
 
-# print(solutions)
+# print(list(solutions))
 print(len(solutions))
 print((t1 - t0) * 1000, "ms")
+
+# print(getDifferentSums((1, 2, 3)))
 
 
 # print(getDifferentSums([1, 0.5, 0.5]))
