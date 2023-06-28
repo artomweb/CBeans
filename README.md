@@ -59,7 +59,7 @@ The number that is being “counted to” is not given, “five what?”.
 
 From here onwards:
 
-1. Words for numbers are replaced by their digits.
+1. Words for whole beans are replaced by their digits.
 2. Additional words such as “and” are removed.
 3. Numbers of beans are sorted from high to low.
 
@@ -67,14 +67,11 @@ For example, the original answer is now:
 
 “2 beans, 1 and a half beans, 1 bean, half a bean”
 
+In the diagrams each solution such as “2 beans, 1 and a half beans and half a bean” is represented as “2, 1.5, 0.5” inside a rectangle.
+
 # Calculating combinations of beans
 
-We will step through the algorithm for calculating combinations of beans using a tree structure.
-
-In these diagrams:
-
-- Each solution such as “2 beans, 1 and a half beans and half a bean” is **represented** as “2, 1.5, 0.5” inside a rectangle.
-- Each arrow represents the addition of two values in the previous rectangle
+We will step through the algorithm for calculating combinations of beans using a tree structure. Each arrow represents the addition of two values in the previous rectangle
 
 ### Combinations for 1:
 
