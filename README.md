@@ -122,18 +122,18 @@ def getDifferentSums(beanCs):
     differentSums = set()
     sumVariations = set()
 
-	# For each pair of unique values in the array
+    # For each pair of unique values in the array
     for i in range(len(beanCs)):
         for j in range(i + 1, len(beanCs)):
             newSum = beanCs[i] + beanCs[j]
 
-			# If this sum has already been made then this solution is a duplicate
+            # If this sum has already been made then this solution is a duplicate
             if newSum in sumVariations:
                 break
 
             sumVariations.add(newSum)
 
-			# Create a new tuple with the sum and then sort it to remove non destinct duplicates
+            # Create a new tuple with the sum and then sort it to remove non destinct duplicates
             newBeanCombos = (newSum, ) + beanCs[:i] + beanCs[i + 1:j] + beanCs[j + 1:]
             differentSums.add(tuple(sorted(newBeanCombos)))
 
