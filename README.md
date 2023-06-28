@@ -45,7 +45,7 @@ For example, the original answer is now:
 
    “1 and a half beans”
 
-   Another example, these two sentences are **\*\***not**\*\*** the same:
+   Another example, these two sentences are **not** the same:
 
    “2 beans, 2 beans”
 
