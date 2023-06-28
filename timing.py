@@ -85,46 +85,46 @@ def findBeans(thisSol, allSols):
     return allSols
 
 
-# timings = []
+timings = []
 
-# start = 0
-# stop = 25
+start = 0
+stop = 25
 
-# for i in range(start, stop + 1):
-#     halfBeans = tuple([0.5] * int(i / 0.5))
-#     t0 = time.time()
-#     solutions = findBeans(halfBeans, set())
-#     t1 = time.time()
-#     timings.append([i, (t1-t0) * 1000])
-#     print([i, (t1-t0) * 1000])
-
-
-# print(timings)
+for i in range(start, stop + 1):
+    halfBeans = tuple([0.5] * int(i / 0.5))
+    t0 = time.time()
+    solutions = findBeans(halfBeans, set())
+    t1 = time.time()
+    timings.append([i, (t1-t0) * 1000])
+    print([i, (t1-t0) * 1000])
 
 
-# dfTImings = np.array(timings)
+print(timings)
+
+
+dfTImings = np.array(timings)
 # np.savetxt("foo.csv", dfTImings, delimiter=",")
 
-# new_list = range(start, stop+1)
-# plt.xticks(new_list)
+new_list = range(start, stop+1)
+plt.xticks(new_list)
 
-# plt.plot(dfTImings[:, 0], dfTImings[:, 1])
+plt.plot(dfTImings[:, 0], dfTImings[:, 1])
 
-# plt.xlabel("Count to")
-# plt.ylabel("Execution time (ms)")
+plt.xlabel("Count to")
+plt.ylabel("Execution time (ms)")
 
-# plt.show()
+plt.show()
 
-toMake = 20
+# toMake = 20
 
-halfBeans = tuple([0.5] * int(toMake / 0.5))
-t0 = time.time()
-solutions = findBeans(halfBeans, set())
-t1 = time.time()
+# halfBeans = tuple([0.5] * int(toMake / 0.5))
+# t0 = time.time()
+# solutions = findBeans(halfBeans, set())
+# t1 = time.time()
 
-# print(list(solutions))
-print(len(solutions))
-print((t1 - t0) * 1000, "ms")
+# # print(list(solutions))
+# print(len(solutions))
+# print((t1 - t0) * 1000, "ms")
 
 # print(getDifferentSums((1, 2, 3)))
 
