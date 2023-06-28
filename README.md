@@ -293,8 +293,6 @@ This aligns to the number of ways to partition 2n into positive integers. [(OEIS
 
 The reason that we use 2n is because 0.5 (”half a bean”) is used, therefore instead of partitioning into integers, we are partitioning into 0.5 increments which means there are twice the number of options.
 
-The sequence of 2n is used because between 0 and 5 there are actually 10 numbers in 0.5 increments and 10 = 2 \* 5.
-
 This is called partition in number theory. [(wikipedia)](<https://en.wikipedia.org/wiki/Partition_(number_theory)>)
 
 The seven integer partitions of 5 are
