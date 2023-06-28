@@ -193,7 +193,7 @@ The singular bean solution such as “1 bean” can be omitted.
 ### 1 (2 solutions)
 
 half a bean, half a bean\
-1 bean\
+1 bean
 
 ### 2 (5 Solutions)
 
