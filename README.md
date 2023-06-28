@@ -21,6 +21,40 @@ This question is one often given to children where the child should reply with a
 
 The number that is being “counted to” is not given, “five what?”.
 
+## Assumptions made
+
+1. That there are 4 fundamental beans in the original answer: “two beans”, “one and a half beans”, “half a bean” and “a bean”.
+
+   This assumes that “half a bean and a bean” is not one indivisible unit and that it can in fact be broken up into “ half a bean” and “a bean”
+
+   That “One and a half beans” is **not** the same as “One bean, and half a bean”.
+
+   Therefore these beans cannot be combined. As shown in the original answer.
+
+   In other words, these two sentences are **not** the same:
+
+   “One bean, half a bean”
+
+   “One and a half beans”
+
+   Another example, these two sentences are **\*\***not**\*\*** the same:
+
+   “Two beans, Two beans”
+
+   “Four beans”
+
+2. That the idea of beans and their fractional parts can be extended past 2 beans.
+
+   The original answer included 2 and fewer beans. However, it is assumed that “2 and a half beans” etc. also exist.
+
+3. That the answers are [commutative](https://en.wikipedia.org/wiki/Commutative_property) and therefore only distinct solutions are accepted
+
+   For example, these two sentences will be treated as equal and only counted once:
+
+   “One bean, two beans”
+
+   “Two beans, One bean”
+
 ## Formatting the answers
 
 From here onwards:
@@ -32,40 +66,6 @@ From here onwards:
 For example, the original answer is now:
 
 “2 beans, 1 and a half beans, 1 bean, half a bean”
-
-## Assumptions made
-
-1. That there are 4 fundamental beans in the original answer: “two beans”, “one and a half beans”, “half a bean” and “a bean”.
-
-   This assumes that “half a bean and a bean” is not one indivisible unit and that it can in fact be broken up into “ half a bean” and “a bean”
-
-1. That “1 and a half beans” is **not** the same as “1 bean, and half a bean”.
-
-   Therefore these beans cannot be combined. As shown in the original answer.
-
-   In other words, these two sentences are **not** the same:
-
-   “1 bean, half a bean”
-
-   “1 and a half beans”
-
-   Another example, these two sentences are **not** the same:
-
-   “2 beans, 2 beans”
-
-   “4 beans”
-
-1. That the idea of beans and their fractional parts can be extended past 2 beans.
-
-   The original answer included 2 and fewer beans. However, it is assumed that “2 and a half beans” etc. also exist.
-
-1. That the answers are [commutative](https://en.wikipedia.org/wiki/Commutative_property) and therefore only distinct solutions are accepted
-
-   For example, these two sentences will be treated as equal and only counted once:
-
-   “1 bean, 2 beans”
-
-   “2 beans, 1 bean”
 
 # Calculating combinations of beans
 
